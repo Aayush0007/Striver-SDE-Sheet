@@ -1,0 +1,16 @@
+Better Approach
+Algorithm / Intuition
+Intuition: If we carefully observe, we can notice that to get the sum of the current subarray we just need to add the current element(i.e. arr[j]) to the sum of the previous subarray i.e. arr[i….j-1].
+
+Assume previous subarray = arr[i……j-1]
+current subarray = arr[i…..j]
+Sum of arr[i….j] = (sum of arr[i….j-1]) + arr[j]
+
+This is how we can remove the third loop and while moving j pointer, we can calculate the sum.
+
+Approach:
+The steps are as follows:
+
+First, we will run a loop(say i) that will select every possible starting index of the subarray. The possible starting indices can vary from index 0 to index n-1(n = array size).
+Inside the loop, we will run another loop(say j) that will signify the ending index as well as the current element of the subarray. For every subarray starting from index i, the possible ending index can vary from index i to n-1(n = size of the array).
+Inside loop j, we will add the current element to the sum of the previous subarray i.e. sum = sum + arr[j]. Among all the sums the maximum one will be the answer.

@@ -1,0 +1,9 @@
+Algorithm / Intuition
+Intuition: We can simply use 2 loops and track every transaction and maintain a variable maxPro to contain the max value among all transactions.
+
+Approach: 
+
+Use a for loop of ‘i’ from 0 to n.
+Use another for loop of j from ‘i+1’ to n.
+If arr[j] > arr[i] , take the difference and compare  and store it in the maxPro variable.
+Return maxPro.

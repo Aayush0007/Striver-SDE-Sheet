@@ -1,0 +1,12 @@
+Algorithm / Intuition
+Keeping count of values
+
+Intuition: Since in this case there are only 3 distinct values in the array so it’s easy to maintain the count of all, Like the count of 0, 1, and 2. This can be followed by overwriting the array based on the frequency(count) of the values.
+
+Approach: 
+
+Take 3 variables to maintain the count of 0, 1 and 2.
+Travel the array once and increment the corresponding counting variables
+( let’s consider count_0 = a, count_1 = b, count_2 = c )
+
+In 2nd traversal of array, we will now over write the first ‘a’ indices / positions in array with ’0’, the next ‘b’ with ‘1’ and the remaining ‘c’ with ‘2’.

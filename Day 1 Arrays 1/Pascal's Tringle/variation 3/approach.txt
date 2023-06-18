@@ -1,0 +1,15 @@
+Naive Approach
+Algorithm / Intuition
+The naive approach is basically a combination of variation 1 and variation 2. Here, for every row from 1 to n, we will try to generate all the row elements by simply using the naive approach of variation 2. So, we will use the same code as variation 2(naive approach), inside a loop (i.e. row runs from 1 to n).
+
+Approach:
+The steps are as follows:
+
+First, we will run a loop(say row) from 1 to n.
+We will use a loop(say col) to iterate over each column i.e. from 1 to n. And inside the nested loops, we will do the following steps:
+First, we will consider row-1 as n and col-1 as r.
+After that, we will simply calculate the value of the combination using a loop. 
+The loop will run from 0 to r. And in each iteration, we will multiply (n-i) with the result and divide the result by (i+1).
+Finally, we will add the element to a temporary list.
+After calculating all the elements for all columns of a row, we will add the temporary list to our final answer list.
+Finally, we will return the answer list.

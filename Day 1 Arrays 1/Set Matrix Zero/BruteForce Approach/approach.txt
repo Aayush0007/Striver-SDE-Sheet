@@ -1,0 +1,14 @@
+Approach:
+The steps are the following:
+
+First, we will use two loops(nested loops) to traverse all the cells of the matrix.
+
+If any cell (i,j) contains the value 0, we will mark all cells in row i and column j with -1 except those which contain 0.
+
+We will perform step 2 for every cell containing 0.
+
+Finally, we will mark all the cells containing -1 with 0.
+
+Thus the given matrix will be modified according to the question.
+
+Note: Here, we are assuming that the matrix does not contain any negative numbers. But if it contains negatives, we need to find some other ways to mark the cells instead of marking them with -1.
