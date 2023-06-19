@@ -1,0 +1,12 @@
+Better Approach (Using Hashing): 
+Intuition:
+Instead of counting the occurrences every time, using the hashing technique, we will store the frequency of each element between 1 to N. Now, the element with frequency 2 will be the repeating number and the element with frequency 0 will be the missing number.
+
+Note: Here, we can solve this problem using a hash array.
+
+Approach:
+The steps are as follows:
+
+The range of the number is 1 to N. So, we need a hash array of size N+1 (as we want to store the frequency of N as well).
+We will iterate all the elements of the given array and update the hash array accordingly i.e. hash[a[i]] = hash[a[i]]+1.
+Now, we will iterate on the hash array and return the two elements with frequencies 2 and 0.

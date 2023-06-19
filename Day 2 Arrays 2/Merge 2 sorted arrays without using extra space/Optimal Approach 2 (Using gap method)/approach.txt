@@ -1,0 +1,33 @@
+Optimal Approach 2 (Using gap method): 
+
+This gap method is based on a sorting technique called shell sort. The intuition of this method is simple. 
+
+Intuition: Similar to optimal approach 1, in this approach, we will use two pointers i.e. left and right, and swap the elements if the element at the left pointer is greater than the element at the right pointer. 
+
+But the placing of the pointers will be based on the gap value calculated. The formula to calculate the initial gap is the following:
+
+Initial gap = ceil((size of arr1[] + size of arr2[]) / 2)
+
+Assume the two arrays as a single continuous array and initially, we will place the left pointer at the first index and the right pointer at the (left+gap) index of that continuous array.
+
+Now, we will compare the elements at the left and right pointers and move them by 1 place each time after comparison. While comparing we will swap the elements if the element at the left pointer > the element at the right pointer. After some steps, the right pointer will reach the end and the iteration will be stopped.
+
+After each iteration, we will decrease the gap and will follow the same procedure until the iteration for gap = 1 gets completed. Now, after each iteration, the gap will be the following:
+
+gap = ceil( previous gap / 2)
+
+The whole process will be applied to the imaginary continuous array constructed using arr1[] and arr2[].
+
+Approach:
+
+The steps are as follows:
+
+First, assume the two arrays as a single array and calculate the gap value i.e. ceil((size of arr1[] + size of arr2[]) / 2).
+We will perform the following operations for each gap until the value of the gap becomes 0:
+Place two pointers in their correct position like the left pointer at index 0 and the right pointer at index (left+gap).
+Again we will run a loop until the right pointer reaches the end i.e. (n+m). Inside the loop, there will be 3 different cases:
+If the left pointer is inside arr1[] and the right pointer is in arr2[]: We will compare arr1[left] and arr2[right-n] and swap them if arr1[left] > arr2[right-n].
+If both the pointers are in arr2[]: We will compare arr1[left-n] and arr2[right-n] and swap them if arr1[left-n] > arr2[right-n].
+If both the pointers are in arr1[]: We will compare arr1[left] and arr2[right] and swap them if arr1[left] > arr2[right].
+After the right pointer reaches the end, we will decrease the value of the gap and it will become ceil(current gap / 2). 
+Finally, after performing all the operations, we will get the merged sorted array.

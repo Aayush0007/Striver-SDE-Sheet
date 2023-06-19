@@ -1,0 +1,15 @@
+Optimal Approach 1 (without using any extra space): 
+In this optimal approach, we need to get rid of the extra space we were using.
+
+Approach:
+The sizes of the given arrays are n(size of arr1[]) and m(size of arr2[]).
+
+The steps are as follows:
+
+We will declare two pointers i.e. left and right. The left pointer will point to the last index of the arr1[](i.e. Basically the maximum element of the array). The right pointer will point to the first index of the arr2[](i.e. Basically the minimum element of the array).
+Now, the left pointer will move toward index 0 and the right pointer will move towards the index m-1. While moving the two pointers we will face 2 different cases like the following:
+If arr1[left] > arr2[right]: In this case, we will swap the elements and move the pointers to the next positions.
+If arr1[left] <= arr2[right]: In this case, we will stop moving the pointers as arr1[] and arr2[] are containing correct elements.
+Thus, after step 2, arr1[] will contain all smaller elements and arr2[] will contain all bigger elements. Finally, we will sort the two arrays.
+Intuition:
+If we merge the given array, one thing we can assure is that arr1[] will contain all the smaller elements and arr2[] will contain all the bigger elements. This is the logic we will use. Using the 2 pointers, we will swap the bigger elements of arr1[] with the smaller elements of arr2[] until the minimum of arr2[] becomes greater or equal to the maximum of arr1[].
