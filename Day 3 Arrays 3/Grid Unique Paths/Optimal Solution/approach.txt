@@ -1,0 +1,21 @@
+Solution 3: Combinatorics Solution
+
+Intuition: If we observe examples there is a similarity in paths from start to end. Each time we are taking an exactly m+n-2 number of steps to reach the end.
+
+
+
+
+From start to reach the end we need a certain number of rightward directions and a certain number of downward directions. So we can figure out we need n-1 no. of rightward direction and m-1 no. of downward direction to reach the endpoint.
+
+Since we need an m+n-2 number of steps to reach the end among those steps if we choose n-1 rightward direction or m-1 downward direction and calculate the combinations ( ie: m+n-2Cn-1 or m+n-2Cm-1) we’ll get the total number of paths.
+
+Approach: The approach of this solution is very simple just use a for loop to calculate the m+n-2Cn-1  or m+n-2Cm-1 
+
+Dry Run: We’ll take the input m = 2 and n = 3 
+
+
+According to our observation, we need an m+n-2 number of steps to reach the end. So we need 3 steps and in every step, we need an n-1 number of rightward direction and m-1 number of downward direction. Among 3 steps if we choose 2 rightward directions then the result will be 3 ( 3C2) or among 3 steps if we choose 1 downward direction then the result will also be 3 ( 3C1).
+
+
+
+

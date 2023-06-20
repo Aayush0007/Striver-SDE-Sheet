@@ -1,0 +1,9 @@
+Naive Approach: 
+
+Approach:
+
+The steps are as follows:
+
+We will run a loop that will select the elements of the array one by one.
+Now, for each element, we will run another loop and count its occurrence in the given array.
+If any element occurs more than the floor of (N/2), we will simply return it.

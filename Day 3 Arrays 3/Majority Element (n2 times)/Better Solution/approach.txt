@@ -1,0 +1,11 @@
+Solution 2 (Better):
+
+Intuition: Use a better data structure to reduce the number of look-up operations and hence the time complexity. Moreover, we have been calculating the count of the same element again and again – so we have to reduce that also.
+
+Approach: 
+
+Use a hashmap and store as (key, value) pairs. (Can also use frequency array based on the size of nums) 
+Here the key will be the element of the array and the value will be the number of times it occurs. 
+Traverse the array and update the value of the key. Simultaneously check if the value is greater than the floor of N/2. 
+If yes, return the key 
+Else iterate forward.

@@ -1,0 +1,3 @@
+Solution 1: Brute force approach 
+
+Approach:  Looping from 1 to n and keeping a ans(double) variable. Now every time your loop runs, multiply x with ans. At last, we will return the ans.

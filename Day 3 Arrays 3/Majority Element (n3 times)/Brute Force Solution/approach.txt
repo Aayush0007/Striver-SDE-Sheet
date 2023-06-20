@@ -1,0 +1,11 @@
+Solution:
+Observation: How many integers can occur more than floor(N/3) times in the given array:
+
+If we closely observe, in the given array, there can be a maximum of two integers that can occur more than floor(N/3) times. Let’s understand it using the following scenario:
+Assume there are 8 elements in the given array. Now, if there is any majority element, it should occur more than floor(8/3) = 2 times. So, the majority of elements should occur at least 3 times. Now, if we imagine there are 3 majority elements, then the total occurrence of them will be 3X3 = 9 i.e. greater than the size of the array. But this should not happen. That is why there can be a maximum of 2 majority elements.
+
+Naive Approach (Brute-force): 
+We will run a loop that will select the elements of the array one by one.
+Now, for each unique element, we will run another loop and count its occurrence in the given array.
+If any element occurs more than the floor of (N/3), we will include it in our answer. 
+While traversing if we find any element that is already included in our answer, we will just skip it.

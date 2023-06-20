@@ -1,0 +1,39 @@
+Better Approach (Using Hashing): 
+Intuition:
+Use a better data structure to reduce the number of look-up operations and hence the time complexity. Moreover, we have been calculating the count of the same element again and again – so we have to reduce that also.
+
+Approach: 
+The steps are as follows:
+
+Use a hashmap and store the elements as <key, value> pairs. (Can also use frequency array based on the size of nums).
+Here the key will be the element of the array and the value will be the number of times it occurs. 
+Traverse the whole array and update the occurrence of each element. 
+After that, check the map if the value for any element is greater than the floor of N/3. 
+If yes, include it in the list. 
+Else iterate forward.
+Finally, return the list.
+Dry Run: 
+Let’s take the example of arr[] = {10,20,40,40,40}, n=5.
+
+First, we create an unordered map to store the count of each element.
+
+Now traverse through the array 
+
+Found 10 at index 0, increase the value of key 10 in the map by 1.
+
+Found 20 at index 1, increase the value of key 20 in the map by 1.
+
+Found 40 at index 2, increase the value of key 40 in the map by 1.
+
+Found 40 at index 3, increase the value of key 40 in the map by 1.
+
+Found 40 at index 4, increase the value of key 40 in the map by 1.
+
+Now, Our map will look like this:
+
+10 -> 1 
+20 -> 1
+40 -> 3
+Now traverse through the map, 
+
+We found that the value of key 40 is greater than the floor(N/3). So, 40 is the answer.

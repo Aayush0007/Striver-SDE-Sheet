@@ -1,0 +1,19 @@
+Approach: The problem states that we can either move rightward or downward direction. So we recursively try out all the possible combinations.
+
+At first, we are at the (0,0) index let’s assume this state as (i,j). From here we can move towards the bottom as well as towards the right and we recursively move until we hit the base case.
+
+
+
+2. At any point of time when the recursive call goes out of the matrix boundary (example: let’s assume m = 2, n= 2, and the current position of i and j is (2,0) which is out of matrix boundary), we’ll return zero because from here there are no possible paths beyond and that is the first base case.
+
+
+
+
+3. Whenever the recursive call reaches the end we’ll return 1 because we have found one possible path to reach the end.
+
+
+
+
+4. In the recursive tree what result we have got from the left transition and the right transition will sum it up and return the answer.
+
+
