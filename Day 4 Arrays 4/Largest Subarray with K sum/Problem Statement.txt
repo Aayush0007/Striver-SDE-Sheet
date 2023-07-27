@@ -1,0 +1,10 @@
+Length of the longest subarray with zero Sum
+Problem Statement: Given an array containing both positive and negative integers, we have to find the length of the longest subarray with the sum of all elements equal to zero.
+
+Examples
+Example 1:
+Input Format: N = 6, array[] = {9, -3, 3, -1, 6, -5}
+Result: 5
+Explanation: The following subarrays sum to zero:
+{-3, 3} , {-1, 6, -5}, {-3, 3, -1, 6, -5}
+Since we require the length of the longest subarray, our answer is 5!

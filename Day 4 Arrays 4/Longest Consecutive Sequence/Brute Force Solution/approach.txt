@@ -1,0 +1,3 @@
+Algorithm / Intuition
+Solution 1: (Brute force)
+Approach: We can simply sort the array and run a for loop to find the longest consecutive sequence.

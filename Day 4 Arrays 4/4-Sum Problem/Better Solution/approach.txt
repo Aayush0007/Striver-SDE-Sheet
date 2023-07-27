@@ -1,0 +1,27 @@
+Better Approach (Using 3 loops and set data structure): 
+Approach:
+The steps are as follows:
+
+First, we will declare a set data structure as we want unique quadruplets.
+Then we will use the first loop(say i) that will run from 0 to n-1.
+Inside it, there will be the second loop(say j) that will run from i+1 to n-1.
+Before the third loop, we will declare a HashSet to store the specific array elements as we intend to search the fourth element in that HashSet.
+Then there will be the third loop(say k) that runs from j+1 to n-1.
+Inside the third loop, we will calculate the value of the fourth element i.e. target – (nums[i]+nums[j]+nums[k]).
+If the fourth element exists in the HashSet, we will sort these four values i.e. nums[i], nums[j], nums[k], and the fourth element, and insert it in the set data structure declared in step 1.
+After that, we will insert the k-th element i.e. nums[k] in the HashSet as we only want to insert those array elements that are in between indices j and k.
+Finally, we will return a list of stored quadruplets stored in the set data structure.
+Intuition:
+In the previous approach, we were using 4 loops but in this, we want to reduce that to 3 loops. We have to somehow manage to calculate nums[l] as we are planning to remove the fourth loop(i.e. l). In order to calculate nums[l], we can derive a formula like the following:
+
+nums[l] = target - (nums[i]+nums[j]+nums[k])
+So, we will first calculate the triplets nums[i], nums[j], and nums[k] using 3 loops and for the fourth one i.e. nums[l] we will not use another loop and instead we will look up the value target-(nums[i]+nums[j]+nums[k]) in the array. Thus we can remove the fourth loop from the algorithm.
+
+For implementing the search operation of the fourth element, we will use a similar technique as we used in the case of the 3-sum problem. We will store all the elements between the indices j and k in a HashSet and then we will search for the fourth element in the HashSet.
+
+Why we are not inserting all the array elements in the HashSet and then searching for the fourth element:
+
+Let’s understand this intuition using an example. Assume the given array is {1, 2, -1, -2, 2, 0, -1} and the target = 0. Now, we will notice a situation like the following:
+
+
+Now, the fourth element should be target-(nums[i]+nums[j]+nums[k]) = 0 – (1-1+0) = 0. Now, if all the array elements are in the HashSet and we search for 0, we will end up taking the 0 at index k again. The quadruplets will be {nums[i], nums[j], nums[k], nums[k]} but this is absolutely incorrect. That is why we need to only consider the elements that are in between the indices j and k.
