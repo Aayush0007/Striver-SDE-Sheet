@@ -1,0 +1,12 @@
+Merge two sorted Linked Lists
+In this article, we will solve the most asked coding interview question: ” Merge two sorted Linked Lists “
+
+Problem Statement: Given two singly linked lists that are sorted in increasing order of node values, merge two sorted linked lists and return them as a sorted list. The list should be made by splicing together the nodes of the first two lists.
+
+Example 1:
+
+Input Format :
+l1 = {3,7,10}, l2 = {1,2,5,8,10}
+
+Output :
+{1,2,3,5,7,8,10,10}

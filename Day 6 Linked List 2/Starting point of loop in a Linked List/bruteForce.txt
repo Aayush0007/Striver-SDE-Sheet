@@ -1,0 +1,38 @@
+Solution 1: Brute Force
+
+Approach:
+
+We can store nodes in a hash table so that, if a loop exists, the head will encounter the same node again. This node will be present in the table and hence, we can detect the loop. The steps are:-
+
+Iterate the given list.
+For each node visited by the head pointer, check if the node is present in the hash table.
+If yes, the loop detected
+If not, insert the node in the hash table and move the head pointer ahead.
+If the head reaches null, then the given list does not have a cycle in it.
+Dry Run:
+
+We start iterating each node and storing nodes in the hash table if an element is not present.
+
+
+Node(1) is not present in the hash table. So, we insert a node in it and move head ahead.
+
+
+Node(2) is not present in the hash table. So, we insert a node in it and move head ahead.
+
+
+Node(3) is not present in the hash table. So, we insert a node in it and move head ahead.
+
+
+Node(4) is not present in the hash table. So, we insert a node in it and move head ahead.
+
+
+Node(3) is not present in the hash table. So, we insert a node in it and move head ahead. Though this node contains 3 as a value, it is a different node than the node at position 3.
+
+
+Node(6) is not present in the hash table. So, we insert a node in it and move head ahead.
+
+
+Node(10) is not present in the hash table. So, we insert a node in it and move head ahead.
+
+
+We reached the same node which was present in the hash table. Thus, the starting node of the cycle is node(3).

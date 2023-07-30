@@ -1,0 +1,13 @@
+Solution:
+
+Approach:
+
+Since each list, followed by the bottom pointer, are in sorted order. Our main aim is to make a single list in sorted order of all nodes. So, we can think of a merge algorithm of merge sort.
+
+The process to flatten the given linked list is as follows:-
+
+We will recurse until the head pointer moves null. The main motive is to merge each list from the last.
+Merge each list chosen using the merge algorithm. The steps are
+Create a dummy node. Point two pointers, i.e, temp and res on dummy node. res is to keep track of dummy node and temp pointer is to move ahead as we build the flattened list.
+We iterate through the two chosen. Move head from any of the chosen lists ahead whose current pointed node is smaller. 
+Return the new flattened list found.

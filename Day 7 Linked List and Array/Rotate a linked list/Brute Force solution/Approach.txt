@@ -1,0 +1,7 @@
+Solution: Brute Force
+
+Approach:
+
+We have to move the last element to first for each k.
+
+For each k, find the last element from the list. Move it to the first.

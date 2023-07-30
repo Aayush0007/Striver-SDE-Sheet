@@ -1,0 +1,19 @@
+Solution: Using the extra data structure
+
+Approach:
+
+We can store elements in an array. Then check if the given array is a palindrome. How to check if an array is a palindrome? 
+
+Let’s take a string, say “level” which is a palindrome. Let’s observe a thing.
+
+
+So we can see that each index letter is the same as (length-each index -1) letter. 
+
+The same logic required to check an array is a palindrome.
+
+Following are the steps to this approach.
+
+Iterate through the given list to store it in an array.
+Iterate through the array.
+For each index in range of n/2 where n is the size of the array
+Check if the number in it is the same as the number in the n-index-1 of the array.

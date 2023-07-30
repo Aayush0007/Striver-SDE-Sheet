@@ -1,0 +1,61 @@
+Inplace method without using extra space.
+
+The idea to do it without extra space is to play around with the next pointers of nodes in the two input lists and arrange them in a fashion such that all nodes are linked in increasing order of values.
+
+Approach :
+
+Step 1: Create two pointers, say l1 and l2. Compare the first node of both lists and find the small among the two. Assign pointer l1 to the smaller value node.
+
+Step 2: Create a pointer, say res, to l1. An iteration is basically iterating through both lists till the value pointed by l1 is less than or equal to the value pointed by l2.
+
+Step 3: Start iteration. Create a variable, say, temp. It will keep track of the last node sorted list in an iteration. 
+
+Step 4: Once an iteration is complete, link node pointed by temp to node pointed by l2. Swap l1 and l2.
+
+Step 5: If any one of the pointers among l1 and l2 is NULL, then move the node pointed by temp to the next higher value node.
+
+Dry Run :
+
+Created two pointers l1 and l2. Comparing the first node of both lists. Pointing l1 to the smaller one among the two. Create variable res and store the initial value of l1. This ensures the head of the merged sorted list.
+
+
+Now, start iterating. A variable temp will always be equal to NULL at the start of the iteration.
+
+
+1 < 3. temp will store nodes pointed by l1. Then move l1 to the next node.
+
+
+2 < 3. temp will store node l1(2) and then move l1 to the next node.
+
+
+5 > 3. Now, the very first iteration completes. Now, the temp storing node is connected to the node pointed by l2, i.e 2 links to 3. Swap l1 and l2. Initialize temp to NULL.
+
+
+The second iteration starts. 3 < 5. So, first store l1(3) in temp then move l1 to the next connected node.
+
+
+7 > 5. The second iteration stops here. Link node stored in temp node pointed by l2, i.e, 3 links to 5. Swap l1 and l2. temp is assigned to NULL at the start of the third iteration.
+
+
+5 < 7. temp will store l1(5) and move l1 to the next linked node.
+
+
+8 > 7. The third iteration stops. Link node stored in temp to node pointed by l2, i.e 5 links to 7. Swap l1 and l2. Assign temp to NULL at the start of the fourth iteration. 
+
+
+7 < 8. temp stores l1(7). l1 moves to the next node.
+
+
+10 > 8. The fourth iteration stops here. 7 is linked to 8. Swap l1 and l2. The start of the fifth iteration initializes temp to NULL.
+
+
+8 < 10. temp stores l1(8). l1 moves to the next node. 
+
+
+10 = 10. temp stores l1(10). l1 moves forward and is now equal to NULL.
+
+
+As l1 is equal to NULL, so complete iteration stops. We link 10, which is stored in variable temp, is linked to 10 pointed by l2. 
+
+
+Hence, we achieved our sorted merge list.

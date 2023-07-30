@@ -1,0 +1,8 @@
+Solution 2: Hashing
+
+Approach:
+
+Can we improve brute-force time complexity? In brute force, we are basically performing “searching”. We can also perform searches by Hashing. Taking into consideration that hashing process takes O(1) time complexity. So the process is as follows:-
+
+Iterate through list 1 and hash its node address. Why? (Hint: depends on the common attribute we are searching)
+Iterate through list 2 and search the hashed value in the hash table. If found, return node.

@@ -1,0 +1,10 @@
+Remove N-th node from the end of a Linked List
+Problem Statement: Given a linked list, and a number N. Find the Nth node from the end of this linked list and delete it. Return the head of the new modified linked list.
+
+Example 1 : 
+
+Input: head = [1,2,3,4,5], n = 2
+
+Output: [1,2,3,5]
+
+Explanation: Refer Below Image

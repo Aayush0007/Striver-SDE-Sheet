@@ -1,0 +1,8 @@
+Solution 1: Brute Force
+Approach:
+We will use a hash-map for keeping track of deep copies of every node.
+
+Iterate through the entire list.
+For each node, create a deep copy of each node and hash it with it. Store it in the hashmap.
+Now, again iterate through the given list. For each node, link the deep node present as the hash value of the original node as per original node. 
+the head of the deep copy list will be the head of hashed value of original node.

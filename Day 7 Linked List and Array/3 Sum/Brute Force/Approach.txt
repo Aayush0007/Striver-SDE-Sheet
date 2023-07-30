@@ -1,0 +1,15 @@
+Algorithm / Intuition
+In the question, it is clearly stated that for each case the picked indices i.e. i, j, and k must be distinct. This means [arr[1], arr[1], arr[2]] is not a valid triplet and also remember [arr[1], arr[0], arr[2]] and [arr[0], arr[1], arr[2]] will be considered the same.
+
+Intuition:
+This approach is pretty straightforward. Here, we will check all possible triplets using 3 loops and among them, we will consider the ones whose sum is equal to the given target i.e. 0. And before considering them as our answer we need to sort the triplets in ascending order so that we can consider only the unique ones.
+
+Algorithm:
+The steps are as follows:
+
+First, we will declare a set data structure as we want unique triplets.
+Then we will use the first loop(say i) that will run from 0 to n-1.
+Inside it, there will be the second loop(say j) that will run from i+1 to n-1.
+Then there will be the third loop(say k) that runs from j+1 to n-1.
+Now, inside these 3 nested loops, we will check the sum i.e. arr[i]+arr[j]+arr[k], and if it is equal to the target i.e. 0 we will sort this triplet and insert it in the set data structure.
+Finally, we will return the list of triplets stored in the set data structure.

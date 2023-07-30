@@ -1,0 +1,10 @@
+Solution 3: Difference in length
+
+Approach:
+
+We will reduce the search length. This can be done by searching the length of the shorter linked list. How? Let’s see the process.
+
+Find the length of both lists.
+Find the positive difference between these lengths.
+Move the dummy pointer of the larger list by the difference achieved. This makes our search length reduced to a smaller list length.
+Move both pointers, each pointing two lists, ahead simultaneously if both do not collide.
