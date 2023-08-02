@@ -1,0 +1,7 @@
+Solution: Greedy Algorithm
+
+Approach: We will keep a pointer at the end of the array i. Now while(V >= coins[i]) we will reduce V by coins[i] and add it to the ans array.
+
+We will also ignore the coins which are greater than V and the coins which are less than V. We consider them and reduce the value of V by coins[I].
+
+
