@@ -1,0 +1,22 @@
+Solution 1: Recursion
+
+Intuition:
+
+The best way to solve such problems is using recursion.
+
+Approach:
+
+Start at the source(0,0) with an empty string and try every possible path i.e upwards(U), downwards(D), leftwards(L) and rightwards(R).
+As the answer should be in lexicographical order so it’s better to try the directions in lexicographical order i.e (D,L,R,U)
+Declare a 2D-array named visited because the question states that a single cell should be included only once in the path,so it’s important to keep track of the visited cells in a particular path.
+If a cell is in path, mark it in the visited array.
+Also keep a check of the “out of bound” conditions while going in a particular direction in the matrix. 
+Whenever you reach the destination(n,n) it’s very important to get back as shown in the recursion tree.
+While getting back, keep on unmarking the visited array for the respective direction.Also check whether there is a different path possible while getting back and if yes, then mark that cell in the visited array.
+Recursive tree:
+
+
+For  “DDRDRR” :
+
+
+

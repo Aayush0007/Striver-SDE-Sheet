@@ -1,0 +1,11 @@
+Solution 2: 
+
+Intuition: This is the optimization of the issafe function. In the previous issafe function, we need o(N) for a row, o(N) for the column, and o(N) for the diagonal. Here, we will use hashing to maintain a list to check whether that position can be the right one or not.
+
+Approach: 
+
+For checking Left row elements
+
+
+For checking upper diagonal and lower diagonal
+

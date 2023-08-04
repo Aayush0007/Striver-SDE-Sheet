@@ -1,0 +1,13 @@
+Sample Input 1:
+
+1
+6
+god is now no where here
+godisnowherenowhere
+
+
+Sample Output 1:
+god is no where no where
+god is no where now here
+god is now here no where
+god is now here now here
